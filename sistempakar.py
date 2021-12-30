@@ -1,4 +1,4 @@
-from experta import *
+from experta import * 
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
@@ -96,7 +96,7 @@ class Greetings(KnowledgeEngine):
 	@Rule(Fact(action='find_disease'), NOT(Fact(kulit_kepala_berminyak=W())),salience = 1)
 	def symptom_5(self):
 		self.declare(Fact(kulit_kepala_berminyak=input("Apakah kulit kepala anda berminyak: ")))
-	 
+	
 	@Rule(Fact(action='find_disease'), NOT(Fact(rasa_gatal=W())),salience = 1)
 	def symptom_6(self):
 		self.declare(Fact(rasa_gatal=input("Apakah anda merasakan gatal: ")))
@@ -137,123 +137,123 @@ class Greetings(KnowledgeEngine):
 	def symptom_15(self):
 		self.declare(Fact(menimbulkan_warna_kekuningan=input("Apakah ada timbul warna kekuningan pada kulit anda: ")))
 
-	@Rule(Fact(action='find_disease'),Fact(kulit_membengkak="yes"),Fact(benjolan_di_kulit="yes"),
-		  Fact(mengeluarkan_nanah="no"),Fact(demam="no"),Fact(mata_merah="no"),Fact(kulit_kepala_berminyak="no"),
-		  Fact(rasa_gatal="no"),Fact(luka_dari_bagian_mulut="no"),Fact(memiliki_gelembung_berisi_air="no"),
-		  Fact(rasa_nyeri="no"),Fact(kulit_melepuh="no"),Fact(memiliki_bercak_bercak_merah="no"),Fact(iritasi_kulit="no"),
-		  Fact(uban_muncul_sebelum_waktunya="no"),Fact(muncul_keringat_berlebihan="no"),
-		  Fact(menimbulkan_warna_kekuningan="no"))
-	def disease_0(self):
-		self.declare(Fact(disease="Jerawat"))
+		@Rule(Fact(action='find_disease'),Fact(kulit_membengkak="yes"),Fact(benjolan_di_kulit="yes"),
+				Fact(mengeluarkan_nanah="no"),Fact(demam="no"),Fact(mata_merah="no"),Fact(kulit_kepala_berminyak="no"),
+				Fact(rasa_gatal="no"),Fact(luka_dari_bagian_mulut="no"),Fact(memiliki_gelembung_berisi_air="no"),
+				Fact(rasa_nyeri="no"),Fact(kulit_melepuh="no"),Fact(memiliki_bercak_bercak_merah="no"),Fact(iritasi_kulit="no"),
+				Fact(uban_muncul_sebelum_waktunya="no"),Fact(muncul_keringat_berlebihan="no"),
+				Fact(menimbulkan_warna_kekuningan="no"))
+		def disease_0(self):
+			self.declare(Fact(disease="Jerawat"))
 
-	@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="yes"),
-		  Fact(mengeluarkan_nanah="yes"), Fact(demam="no"), Fact(mata_merah="no"), Fact(kulit_kepala_berminyak="no"),
-		  Fact(rasa_gatal="no"), Fact(luka_dari_bagian_mulut="no"), Fact(memiliki_gelembung_berisi_air="no"),
-		  Fact(rasa_nyeri="no"), Fact(kulit_melepuh="no"), Fact(memiliki_bercak_bercak_merah="no"),
-		  Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="no"),
-		  Fact(menimbulkan_warna_kekuningan="no"))
-	def disease_1(self):
-		self.declare(Fact(disease="Bisul"))
+		@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="yes"),
+				Fact(mengeluarkan_nanah="yes"), Fact(demam="no"), Fact(mata_merah="no"), Fact(kulit_kepala_berminyak="no"),
+				Fact(rasa_gatal="no"), Fact(luka_dari_bagian_mulut="no"), Fact(memiliki_gelembung_berisi_air="no"),
+				Fact(rasa_nyeri="no"), Fact(kulit_melepuh="no"), Fact(memiliki_bercak_bercak_merah="no"),
+				Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="no"),
+				Fact(menimbulkan_warna_kekuningan="no"))
+		def disease_1(self):
+			self.declare(Fact(disease="Bisul"))
 
-	@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="no"),
-		  Fact(mengeluarkan_nanah="no"), Fact(demam="yes"), Fact(mata_merah="yes"),
-		  Fact(kulit_kepala_berminyak="no"),
-		  Fact(rasa_gatal="no"), Fact(luka_dari_bagian_mulut="yes"), Fact(memiliki_gelembung_berisi_air="no"),
-		  Fact(rasa_nyeri="no"), Fact(kulit_melepuh="no"), Fact(memiliki_bercak_bercak_merah="no"),
-		  Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="no"),
-		  Fact(menimbulkan_warna_kekuningan="no"))
-	def disease_2(self):
-		self.declare(Fact(disease="Campak"))
+		@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="no"),
+				Fact(mengeluarkan_nanah="no"), Fact(demam="yes"), Fact(mata_merah="yes"),
+				Fact(kulit_kepala_berminyak="no"),
+				Fact(rasa_gatal="no"), Fact(luka_dari_bagian_mulut="yes"), Fact(memiliki_gelembung_berisi_air="no"),
+				Fact(rasa_nyeri="no"), Fact(kulit_melepuh="no"), Fact(memiliki_bercak_bercak_merah="no"),
+				Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="no"),
+				Fact(menimbulkan_warna_kekuningan="no"))
+		def disease_2(self):
+			self.declare(Fact(disease="Campak"))
 
-	@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="no"),
-		  Fact(mengeluarkan_nanah="no"), Fact(demam="no"), Fact(mata_merah="no"), Fact(kulit_kepala_berminyak="yes"),
-		  Fact(rasa_gatal="yes"), Fact(luka_dari_bagian_mulut="no"), Fact(memiliki_gelembung_berisi_air="no"),
-		  Fact(rasa_nyeri="no"), Fact(kulit_melepuh="no"), Fact(memiliki_bercak_bercak_merah="no"),
-		  Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="no"),
-		  Fact(menimbulkan_warna_kekuningan="no"))
-	def disease_3(self):
-		self.declare(Fact(disease="Ketombe"))
+		@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="no"),
+				Fact(mengeluarkan_nanah="no"), Fact(demam="no"), Fact(mata_merah="no"), Fact(kulit_kepala_berminyak="yes"),
+				Fact(rasa_gatal="yes"), Fact(luka_dari_bagian_mulut="no"), Fact(memiliki_gelembung_berisi_air="no"),
+				Fact(rasa_nyeri="no"), Fact(kulit_melepuh="no"), Fact(memiliki_bercak_bercak_merah="no"),
+				Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="no"),
+				Fact(menimbulkan_warna_kekuningan="no"))
+		def disease_3(self):
+			self.declare(Fact(disease="Ketombe"))
 
-	@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="yes"), Fact(benjolan_di_kulit="no"),
-		  Fact(mengeluarkan_nanah="no"), Fact(demam="no"), Fact(mata_merah="no"), Fact(kulit_kepala_berminyak="no"),
-		  Fact(rasa_gatal="no"), Fact(luka_dari_bagian_mulut="yes"), Fact(memiliki_gelembung_berisi_air="no"),
-		  Fact(rasa_nyeri="no"), Fact(kulit_melepuh="no"), Fact(memiliki_bercak_bercak_merah="no"),
-		  Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="no"),
-		  Fact(menimbulkan_warna_kekuningan="no"))
-	def disease_4(self):
-		self.declare(Fact(disease="Sariawan"))
+		@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="yes"), Fact(benjolan_di_kulit="no"),
+				Fact(mengeluarkan_nanah="no"), Fact(demam="no"), Fact(mata_merah="no"), Fact(kulit_kepala_berminyak="no"),
+				Fact(rasa_gatal="no"), Fact(luka_dari_bagian_mulut="yes"), Fact(memiliki_gelembung_berisi_air="no"),
+				Fact(rasa_nyeri="no"), Fact(kulit_melepuh="no"), Fact(memiliki_bercak_bercak_merah="no"),
+				Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="no"),
+				Fact(menimbulkan_warna_kekuningan="no"))
+		def disease_4(self):
+			self.declare(Fact(disease="Sariawan"))
 
-	@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="no"),
-		  Fact(mengeluarkan_nanah="no"), Fact(demam="no"), Fact(mata_merah="no"), Fact(kulit_kepala_berminyak="no"),
-		  Fact(rasa_gatal="no"), Fact(luka_dari_bagian_mulut="no"), Fact(memiliki_gelembung_berisi_air="yes"),
-		  Fact(rasa_nyeri="yes"), Fact(kulit_melepuh="no"), Fact(memiliki_bercak_bercak_merah="no"),
-		  Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="no"),
-		  Fact(menimbulkan_warna_kekuningan="no"))
-	def disease_5(self):
-		self.declare(Fact(disease="Herpes"))
+		@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="no"),
+				Fact(mengeluarkan_nanah="no"), Fact(demam="no"), Fact(mata_merah="no"), Fact(kulit_kepala_berminyak="no"),
+				Fact(rasa_gatal="no"), Fact(luka_dari_bagian_mulut="no"), Fact(memiliki_gelembung_berisi_air="yes"),
+				Fact(rasa_nyeri="yes"), Fact(kulit_melepuh="no"), Fact(memiliki_bercak_bercak_merah="no"),
+				Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="no"),
+				Fact(menimbulkan_warna_kekuningan="no"))
+		def disease_5(self):
+			self.declare(Fact(disease="Herpes"))
 
-	@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="no"),
-		  Fact(mengeluarkan_nanah="no"), Fact(demam="no"), Fact(mata_merah="no"), Fact(kulit_kepala_berminyak="no"),
-		  Fact(rasa_gatal="yes"), Fact(luka_dari_bagian_mulut="no"), Fact(memiliki_gelembung_berisi_air="no"),
-		  Fact(rasa_nyeri="no"), Fact(kulit_melepuh="yes"), Fact(memiliki_bercak_bercak_merah="no"),
-		  Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="no"),
-		  Fact(menimbulkan_warna_kekuningan="no"))
-	def disease_6(self):
-		self.declare(Fact(disease="Kudis"))
+		@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="no"),
+			Fact(mengeluarkan_nanah="no"), Fact(demam="no"), Fact(mata_merah="no"), Fact(kulit_kepala_berminyak="no"),
+			Fact(rasa_gatal="yes"), Fact(luka_dari_bagian_mulut="no"), Fact(memiliki_gelembung_berisi_air="no"),
+			Fact(rasa_nyeri="no"), Fact(kulit_melepuh="yes"), Fact(memiliki_bercak_bercak_merah="no"),
+			Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="no"),
+			Fact(menimbulkan_warna_kekuningan="no"))
+		def disease_6(self):
+			self.declare(Fact(disease="Kudis"))
 
-	@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="no"),
-		  Fact(mengeluarkan_nanah="no"), Fact(demam="yes"), Fact(mata_merah="no"), Fact(kulit_kepala_berminyak="no"),
-		  Fact(rasa_gatal="no"), Fact(luka_dari_bagian_mulut="no"), Fact(memiliki_gelembung_berisi_air="no"),
-		  Fact(rasa_nyeri="no"), Fact(kulit_melepuh="yes"), Fact(memiliki_bercak_bercak_merah="yes"),
-		  Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="no"),
-		  Fact(menimbulkan_warna_kekuningan="no"))
-	def disease_7(self):
-		self.declare(Fact(disease="Impetigo"))
+		@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="no"),
+			Fact(mengeluarkan_nanah="no"), Fact(demam="yes"), Fact(mata_merah="no"), Fact(kulit_kepala_berminyak="no"),
+			Fact(rasa_gatal="no"), Fact(luka_dari_bagian_mulut="no"), Fact(memiliki_gelembung_berisi_air="no"),
+			Fact(rasa_nyeri="no"), Fact(kulit_melepuh="yes"), Fact(memiliki_bercak_bercak_merah="yes"),
+			Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="no"),
+			Fact(menimbulkan_warna_kekuningan="no"))
+		def disease_7(self):
+			self.declare(Fact(disease="Impetigo"))
 
-	@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="no"),
-		  Fact(mengeluarkan_nanah="no"), Fact(demam="yes"), Fact(mata_merah="yes"), Fact(kulit_kepala_berminyak="no"),
-		  Fact(rasa_gatal="no"), Fact(luka_dari_bagian_mulut="no"), Fact(memiliki_gelembung_berisi_air="no"),
-		  Fact(rasa_nyeri="no"), Fact(kulit_melepuh="no"), Fact(memiliki_bercak_bercak_merah="no"),
-		  Fact(iritasi_kulit="yes"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="no"),
-		  Fact(menimbulkan_warna_kekuningan="no"))
-	def disease_8(self):
-		self.declare(Fact(disease="Lepra"))
+		@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="no"),
+			Fact(mengeluarkan_nanah="no"), Fact(demam="yes"), Fact(mata_merah="yes"), Fact(kulit_kepala_berminyak="no"),
+			Fact(rasa_gatal="no"), Fact(luka_dari_bagian_mulut="no"), Fact(memiliki_gelembung_berisi_air="no"),
+			Fact(rasa_nyeri="no"), Fact(kulit_melepuh="no"), Fact(memiliki_bercak_bercak_merah="no"),
+			Fact(iritasi_kulit="yes"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="no"),
+			Fact(menimbulkan_warna_kekuningan="no"))
+		def disease_8(self):
+			self.declare(Fact(disease="Lepra"))
 
-	@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="yes"),
-		  Fact(mengeluarkan_nanah="no"), Fact(demam="no"), Fact(mata_merah="no"), Fact(kulit_kepala_berminyak="no"),
-		  Fact(rasa_gatal="no"), Fact(luka_dari_bagian_mulut="yes"), Fact(memiliki_gelembung_berisi_air="no"),
-		  Fact(rasa_nyeri="no"), Fact(kulit_melepuh="no"), Fact(memiliki_bercak_bercak_merah="no"),
-		  Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="no"),
-		  Fact(menimbulkan_warna_kekuningan="no"))
-	def disease_9(self):
-		self.declare(Fact(disease="Keloid"))
+		@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="yes"),
+			Fact(mengeluarkan_nanah="no"), Fact(demam="no"), Fact(mata_merah="no"), Fact(kulit_kepala_berminyak="no"),
+			Fact(rasa_gatal="no"), Fact(luka_dari_bagian_mulut="yes"), Fact(memiliki_gelembung_berisi_air="no"),
+			Fact(rasa_nyeri="no"), Fact(kulit_melepuh="no"), Fact(memiliki_bercak_bercak_merah="no"),
+			Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="no"),
+			Fact(menimbulkan_warna_kekuningan="no"))
+		def disease_9(self):
+			self.declare(Fact(disease="Keloid"))
 
-	@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="yes"),
-		  Fact(mengeluarkan_nanah="no"), Fact(demam="no"), Fact(mata_merah="no"), Fact(kulit_kepala_berminyak="no"),
-		  Fact(rasa_gatal="no"), Fact(luka_dari_bagian_mulut="no"), Fact(memiliki_gelembung_berisi_air="no"),
-		  Fact(rasa_nyeri="no"), Fact(kulit_melepuh="no"), Fact(memiliki_bercak_bercak_merah="yes"),
-		  Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="no"),
-		  Fact(menimbulkan_warna_kekuningan="no"))
-	def disease_10(self):
-		self.declare(Fact(disease="Hemangioma"))
+		@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="yes"),
+			Fact(mengeluarkan_nanah="no"), Fact(demam="no"), Fact(mata_merah="no"), Fact(kulit_kepala_berminyak="no"),
+			Fact(rasa_gatal="no"), Fact(luka_dari_bagian_mulut="no"), Fact(memiliki_gelembung_berisi_air="no"),
+			Fact(rasa_nyeri="no"), Fact(kulit_melepuh="no"), Fact(memiliki_bercak_bercak_merah="yes"),
+			Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="no"),
+			Fact(menimbulkan_warna_kekuningan="no"))
+		def disease_10(self):
+			self.declare(Fact(disease="Hemangioma"))
 
-	@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="no"),
-		  Fact(mengeluarkan_nanah="no"), Fact(demam="no"), Fact(mata_merah="no"), Fact(kulit_kepala_berminyak="no"),
-		  Fact(rasa_gatal="no"), Fact(luka_dari_bagian_mulut="no"), Fact(memiliki_gelembung_berisi_air="no"),
-		  Fact(rasa_nyeri="no"), Fact(kulit_melepuh="no"), Fact(memiliki_bercak_bercak_merah="no"),
-		  Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="yes"), Fact(muncul_keringat_berlebihan="no"),
-		  Fact(menimbulkan_warna_kekuningan="no"))
-	def disease_11(self):
-		self.declare(Fact(disease="Vitiligo"))
+		@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="no"),
+			Fact(mengeluarkan_nanah="no"), Fact(demam="no"), Fact(mata_merah="no"), Fact(kulit_kepala_berminyak="no"),
+			Fact(rasa_gatal="no"), Fact(luka_dari_bagian_mulut="no"), Fact(memiliki_gelembung_berisi_air="no"),
+			Fact(rasa_nyeri="no"), Fact(kulit_melepuh="no"), Fact(memiliki_bercak_bercak_merah="no"),
+			Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="yes"), Fact(muncul_keringat_berlebihan="no"),
+			Fact(menimbulkan_warna_kekuningan="no"))
+		def disease_11(self):
+			self.declare(Fact(disease="Vitiligo"))
 
-	@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="no"),
-		  Fact(mengeluarkan_nanah="no"), Fact(demam="no"), Fact(mata_merah="no"), Fact(kulit_kepala_berminyak="no"),
-		  Fact(rasa_gatal="no"), Fact(luka_dari_bagian_mulut="no"), Fact(memiliki_gelembung_berisi_air="no"),
-		  Fact(rasa_nyeri="no"), Fact(kulit_melepuh="no"), Fact(memiliki_bercak_bercak_merah="no"),
-		  Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="yes"),
-		  Fact(menimbulkan_warna_kekuningan="yes"))
-	def disease_12(self):
-		self.declare(Fact(disease="Hypohidrosis"))
+		@Rule(Fact(action='find_disease'), Fact(kulit_membengkak="no"), Fact(benjolan_di_kulit="no"),
+			Fact(mengeluarkan_nanah="no"), Fact(demam="no"), Fact(mata_merah="no"), Fact(kulit_kepala_berminyak="no"),
+			Fact(rasa_gatal="no"), Fact(luka_dari_bagian_mulut="no"), Fact(memiliki_gelembung_berisi_air="no"),
+			Fact(rasa_nyeri="no"), Fact(kulit_melepuh="no"), Fact(memiliki_bercak_bercak_merah="no"),
+			Fact(iritasi_kulit="no"), Fact(uban_muncul_sebelum_waktunya="no"), Fact(muncul_keringat_berlebihan="yes"),
+			Fact(menimbulkan_warna_kekuningan="yes"))
+		def disease_12(self):
+			self.declare(Fact(disease="Hypohidrosis"))
 
 	@Rule(Fact(action='find_disease'),Fact(disease=MATCH.disease),salience = -998)
 
@@ -275,30 +275,30 @@ class Greetings(KnowledgeEngine):
 		print("Beberapa pengobatan yang disarankan :")
 		print(treatments+"\n")
 
-	@Rule(Fact(action='find_disease'),
-		  Fact(kulit_membengkak=MATCH.kulit_membengkak),
-		  Fact(benjolan_di_kulit=MATCH.benjolan_di_kulit),
-		  Fact(mengeluarkan_nanah=MATCH.mengeluarkan_nanah),
-		  Fact(demam=MATCH.demam),
-		  Fact(mata_merah=MATCH.mata_merah),
-		  Fact(kulit_kepala_berminyak=MATCH.kulit_kepala_berminyak),
-		  Fact(rasa_gatal=MATCH.rasa_gatal),
-		  Fact(luka_dari_bagian_mulut=MATCH.luka_dari_bagian_mulut),
-		  Fact(memiliki_gelembung_berisi_air=MATCH.memiliki_gelembung_berisi_air),
-		  Fact(rasa_nyeri=MATCH.rasa_nyeri),
-		  Fact(kulit_melepuh=MATCH.kulit_melepuh),
-		  Fact(memiliki_bercak_bercak_merah=MATCH.memiliki_bercak_bercak_merah),
-		  Fact(iritasi_kulit=MATCH.iritasi_kulit),
-		  Fact(uban_muncul_sebelum_waktunya=MATCH.uban_muncul_sebelum_waktunya),
-		  Fact(muncul_keringat_berlebihan=MATCH.muncul_keringat_berlebihan),
-		  Fact(menimbulkan_warna_kekuningan=MATCH.menimbulkan_warna_kekuningan),
-		  NOT(Fact(disease=MATCH.disease)),salience = -999)
+		@Rule(Fact(action='find_disease'),
+			Fact(kulit_membengkak=MATCH.kulit_membengkak),
+			Fact(benjolan_di_kulit=MATCH.benjolan_di_kulit),
+			Fact(mengeluarkan_nanah=MATCH.mengeluarkan_nanah),
+			Fact(demam=MATCH.demam),
+			Fact(mata_merah=MATCH.mata_merah),
+			Fact(kulit_kepala_berminyak=MATCH.kulit_kepala_berminyak),
+			Fact(rasa_gatal=MATCH.rasa_gatal),
+			Fact(luka_dari_bagian_mulut=MATCH.luka_dari_bagian_mulut),
+			Fact(memiliki_gelembung_berisi_air=MATCH.memiliki_gelembung_berisi_air),
+			Fact(rasa_nyeri=MATCH.rasa_nyeri),
+			Fact(kulit_melepuh=MATCH.kulit_melepuh),
+			Fact(memiliki_bercak_bercak_merah=MATCH.memiliki_bercak_bercak_merah),
+			Fact(iritasi_kulit=MATCH.iritasi_kulit),
+			Fact(uban_muncul_sebelum_waktunya=MATCH.uban_muncul_sebelum_waktunya),
+			Fact(muncul_keringat_berlebihan=MATCH.muncul_keringat_berlebihan),
+			Fact(menimbulkan_warna_kekuningan=MATCH.menimbulkan_warna_kekuningan),
+			NOT(Fact(disease=MATCH.disease)),salience = -999)
 
-	def not_matched(self,kulit_membengkak, benjolan_di_kulit, mengeluarkan_nanah, demam, mata_merah, kulit_kepala_berminyak,
+		def not_matched(self,kulit_membengkak, benjolan_di_kulit, mengeluarkan_nanah, demam, mata_merah, kulit_kepala_berminyak,
 					rasa_gatal, luka_dari_bagian_mulut,memiliki_gelembung_berisi_air ,rasa_nyeri ,kulit_melepuh ,memiliki_bercak_bercak_merah ,
 					iritasi_kulit,uban_muncul_sebelum_waktunya,muncul_keringat_berlebihan,menimbulkan_warna_kekuningan):
-		print("\nTidak menemukan penyakit yang sangat pas dengan gejala yang anda alami")
-		lis = [kulit_membengkak, benjolan_di_kulit, mengeluarkan_nanah, demam, mata_merah, kulit_kepala_berminyak,
+			print("\nTidak menemukan penyakit yang sangat pas dengan gejala yang anda alami")
+			lis = [kulit_membengkak, benjolan_di_kulit, mengeluarkan_nanah, demam, mata_merah, kulit_kepala_berminyak,
 					rasa_gatal, luka_dari_bagian_mulut,memiliki_gelembung_berisi_air ,rasa_nyeri ,kulit_melepuh ,memiliki_bercak_bercak_merah ,
 					iritasi_kulit,uban_muncul_sebelum_waktunya,muncul_keringat_berlebihan,menimbulkan_warna_kekuningan]
 		max_count = 0
